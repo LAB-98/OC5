@@ -362,5 +362,28 @@ input[type="submit"] {
 	.picture {
 		width: 80%;
 	}
+	/* Media queries pour les images du carousel */
+.carousel-item img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Media queries pour l'image dans la section "À propos" */
+  #about .picture img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Media queries pour les images de la galerie */
+  .gallery-item img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Media queries pour l'image dans la section "Contact" */
+  #contact .picture img {
+	max-width: 100%;
+	height: auto;
+  }
 }
 
