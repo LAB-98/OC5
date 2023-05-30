@@ -314,47 +314,39 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-    // Fonction pour optimiser la taille et la compression des images
-    function optimizeImages() {
-      // Sélectionnez toutes les images sur la page
-      const images = document.querySelectorAll('img');
+<script>
+    // Script pour optimiser les images et mettre en cache les ressources
+    (function() {
+      function optimizeImages() {
+        var images = document.getElementsByTagName('img');
+        for (var i = 0; i < images.length; i++) {
+          var image = images[i];
+          var src = image.getAttribute('src');
+          var ext = src.split('.').pop().toLowerCase();
+          if (ext === 'png' || ext === 'jpeg' || ext === 'jpg') {
+            image.setAttribute('src', src + '?w=800&h=600&fit=max');
+          }
+        }
+      }
 
-      // Parcourez toutes les images
-      images.forEach((image) => {
-        // Créez un objet d'image
-        const img = new Image();
+      function cacheResources() {
+        var resources = [
+          './assets/bootstrap/bootstrap.css',
+          './assets/style.css',
+          './assets/maugallery.js',
+          './assets/scripts.js'
+          // Ajoutez ici d'autres ressources à mettre en cache
+        ];
 
-        // Chargez l'image source
-        img.src = image.src;
+        caches.open('my-cache').then(function(cache) {
+          cache.addAll(resources);
+        });
+      }
 
-        // Attendez que l'image se charge
-        img.onload = () => {
-          // Créez un canevas pour dessiner l'image
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
-
-          // Définissez la taille du canevas sur la taille de l'image
-          canvas.width = img.width;
-          canvas.height = img.height;
-
-          // Dessinez l'image sur le canevas
-          context.drawImage(img, 0, 0);
-
-          // Convertissez le canevas en une nouvelle image avec une compression optimisée
-          const optimizedImage = canvas.toDataURL('image/jpeg', 0.8);
-
-          // Appliquez la nouvelle image optimisée à l'élément img
-          image.src = optimizedImage;
-
-          // Activez la mise en cache de l'image
-          image.setAttribute('loading', 'lazy');
-        };
-      });
-    }
-
-    // Appelez la fonction optimizeImages lorsque le document est chargé
-    document.addEventListener('DOMContentLoaded', optimizeImages);
+      // Appeler les fonctions d'optimisation des images et de mise en cache des ressources
+      optimizeImages();
+      cacheResources();
+    })();
   </script>
 </body>
 </html>
