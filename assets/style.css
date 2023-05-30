@@ -329,6 +329,9 @@ input[type="submit"] {
 	  right: 0;
 	  z-index: -1;
 	}
+	.carousel-item img {
+		max-height: 400px;
+	  }
   }
   
   @media all and (max-width: 650px) {
