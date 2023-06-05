@@ -374,17 +374,52 @@ input[type="submit"] {
 	  padding-block: 2em;
 	}
 
+	h2 {
+		font-size: 24px;
+	  }
+	
 	h3 {
-        font-size: 16px;
-    }
+		font-size: 16px;
+	  }
+	
+	h4 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	a {
+		font-size: 16px;
+	}
 
 	form {
 	  width: 100%;
 	}
 	.picture {
-	  width: 80%;
+	  width: 70%;
 	}
 	.carousel-item img {
-	  max-height: 300px;
+	  max-height: 250px;
+	  object-fit: cover;
+	}
+	img {
+		padding: ;
+		height: auto;
+	  }
+	.nav-link {
+		font-size: 16px;
 	}
   }
+
+  @media all and (max-width: 498px) {
+	h2 {
+	  font-size: 18px;
+	}
+  
+	h3 {
+	  font-size: 14px;
+	}
+  }
+  
