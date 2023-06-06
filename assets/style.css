@@ -405,9 +405,6 @@ img {
 	form {
 	  width: 100%;
 	}
-	.picture {
-	  width: 70%;
-	}
 	.carousel-item img {
 	  max-height: 250px;
 	  object-fit: cover;
@@ -419,6 +416,9 @@ img {
 	.nav-link {
 		font-size: 16px;
 	}
+	img[src$="nina.webp"],img[src$="camera.webp"] {
+    width: 70%;
+    height: auto;
   }
 
   @media all and (max-width: 498px) {
