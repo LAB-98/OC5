@@ -106,15 +106,15 @@ h3 {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #b0a753;
+	background-color: #968f4d;
 	border-radius:0 ;
 }
 .nav-pills .nav-link.active {
-    background-color: #b0a753;
+    background-color: #968f4d;
     color: #fff;
 }
 .nav-pills .nav-link:hover {
-    background-color: #b0a753;
+    background-color: #968f4d;
     color: #fff;
     border-radius: 0;
 }
