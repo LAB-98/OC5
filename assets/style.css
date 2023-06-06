@@ -404,22 +404,24 @@ img {
 
 	form {
 	  width: 100%;
+	  display: flex;
+    justify-content: center;
+    align-items: center;
 	}
 	.carousel-item img {
 	  max-height: 250px;
 	  object-fit: cover;
 	}
 	img {
-		padding: ;
+		padding: 0%;
 		height: auto;
+		width: 100%;
+        height: auto;
 	  }
 	.nav-link {
 		font-size: 16px;
 	}
-	img[src$="nina.webp"],img[src$="camera.webp"] {
-    width: 70%;
-    height: auto;
-  }
+}
 
   @media all and (max-width: 498px) {
 	h2 {
@@ -429,5 +431,19 @@ img {
 	h3 {
 	  font-size: 14px;
 	}
+	form {
+	  width: 80%;
+	}
+	form {
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	img {
+	  padding: 0%;
+	  height: auto;
+	  width: 100%;
+      height: auto;
+	}
   }
-  
